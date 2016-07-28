@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+ # API
+ api:
+   container_name: tcc-api
+   image: douglaszuqueto/alpine-nodejs:6.3.0
+   volumes:
+    - ./api:/app/api
+   working_dir: /app/api
+   ports:
+    - 3000:3000
+   command: "node bin/www"
+
+
+ # Broker MQTT
+
+ # Redis
+
+ # MongoDB
+
+ # WebSockets
+
+ # Web
