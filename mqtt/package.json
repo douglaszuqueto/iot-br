@@ -1,0 +1,23 @@
+{
+  "name": "tcc-mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "broker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglaszuqueto/tcc.git"
+  },
+  "author": "Douglas Zuqueto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglaszuqueto/tcc/issues"
+  },
+  "homepage": "https://github.com/douglaszuqueto/tcc#readme",
+  "dependencies": {
+    "mosca": "^2.0.2",
+    "mqtt": "^1.13.0"
+  }
+}
