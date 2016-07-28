@@ -15,6 +15,15 @@ services:
 
 
  # Broker MQTT
+ broker:
+    container_name: tcc-broker
+    image: douglaszuqueto/alpine-nodejs:6.3.0
+    volumes:
+     - ./mqtt:/app/mqtt
+    working_dir: /app/mqtt
+    ports:
+     - 1883:1883
+    command: "node broker"
 
  # Redis
 
