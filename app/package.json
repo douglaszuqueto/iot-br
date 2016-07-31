@@ -1,10 +1,9 @@
 {
-  "name": "tcc-api",
+  "name": "tcc-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +16,16 @@
     "url": "https://github.com/douglaszuqueto/tcc/issues"
   },
   "homepage": "https://github.com/douglaszuqueto/tcc#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "cors": "^2.7.1",
-    "express": "^4.14.0",
-    "jsonwebtoken": "^7.1.6",
-    "mongoose": "^4.5.4"
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-rev": "^7.1.0",
+    "gulp-uglify": "^1.5.4",
+    "rimraf": "^2.5.4"
   }
 }
