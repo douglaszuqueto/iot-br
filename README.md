@@ -6,6 +6,8 @@
  * MongoDB
  * Socket.io
  * MQTT
+ * AngularJS
+ * MaterializeCSS
 
 ## Objetivos
  * Desenvolver uma API Restful;
