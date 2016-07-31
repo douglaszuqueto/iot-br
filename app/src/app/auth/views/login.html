@@ -1,0 +1,89 @@
+<style>
+    .login > img {
+        width: 100%;
+        opacity: 0.5;
+        position: fixed;
+    }
+
+    .login-page {
+        position: relative;
+        opacity: 0.9;
+        /*margin-top: 5%;*/
+    }
+
+    .login-header {
+        margin-top: 3%;
+    }
+
+    .title {
+        color: #009BC9;
+    }
+
+    .theme-color:hover {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .theme-color:focus {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+
+</style>
+<div class="login">
+    <img src="src/img/IoT_2.jpg" alt="">
+    <div class="container">
+        <div class="row login-page">
+            <div class="col s12 m8 l6 offset-l3 offset-m2 card-panel">
+
+                <!--Login Header-->
+                <div class="login-header row">
+                    <div class="col s12 m12 l12 center">
+                        <h1 class="title">IoT</h1>
+                        <h5 class="title">Platform</h5>
+                    </div>
+                </div>
+
+                <!--Login Form-->
+                <div class="row">
+                    <div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
+                        <form method="post" data-ng-submit="Login.login(Login.user)">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="email" name="email" data-ng-model="Login.user.email" required
+                                           tabindex="1">
+                                    <label class="active">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="password" name="password" data-ng-model="Login.user.password" required
+                                           tabindex="2">
+                                    <label class="active">Senha</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="checkbox" id="remember" data-ng-model="Login.user.remember"/>
+                                    <label for="remember">Remember-me</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button type="submit" class="btn green col s12" tabindex="4">Login</button>
+                                    <div class="row"></div>
+                                    <button type="reset" class="btn btn-flat col s12 theme-color" tabindex="3">Limpar
+                                        Campos
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

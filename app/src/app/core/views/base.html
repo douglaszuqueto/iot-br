@@ -1,0 +1,112 @@
+<style>
+    header, main, footer {
+        padding-left: 240px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        header, main, footer {
+            padding-left: 0;
+        }
+
+        .container {
+            width: 95%;
+        }
+    }
+
+    @media only screen and (min-width: 993px) {
+
+        .container {
+            width: 95%;
+        }
+    }
+
+    header nav {
+        background-color: #008BD3 !important;
+    }
+
+    .waves-effect.waves-blue .waves-ripple {
+        /* The alpha value allows the text and background color
+        of the button to still show through. */
+        background-color: #008BD3;
+    }
+
+</style>
+<header>
+    <nav class="top-nav">
+        <div class="">
+            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+            <div class="nav-wrapper">
+                <ul id="user_options" class="dropdown-content">
+                    <li><a href="#">Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a data-ng-click="Base.logout()">Sair<i class="material-icons right">input</i></a></li>
+                </ul>
+                <ul class="right">
+                    <li class="hide-on-small-only">
+                        <a data-ng-click="Base.reload()">
+                            <i class="material-icons">refresh</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="user_options_dropdown" href="" data-activates="user_options">
+                            Menu<i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo center" style="height: 100px; margin-top: 10px">
+            <a id="logo-container" href="#/" class="brand-logo">
+                <img src="src/img/iot.png" alt="IoT Platform" width="60%">
+            </a>
+
+        </li>
+        <h3 class=" center" style="color: #009BC9;">IoT Platform</h3>
+        <div class="divider"></div>
+        <li class="bold">
+            <a ui-sref="home" class="waves-effect waves-blue">Dashboard</a>
+        </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="waves-effect waves-blue">Gráficos</a>
+                </li>
+            </ul>
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="waves-effect waves-blue">Logs</a>
+                </li>
+            </ul>
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="waves-effect waves-blue">Usuários</a>
+                </li>
+            </ul>
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="waves-effect waves-blue">Configuracoes</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<main>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+</main>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.button-collapse').sideNav({'edge': 'left'});
+        $('.collapsible').collapsible({
+            accordion: false
+        });
+        $(".user_options_dropdown").dropdown({belowOrigin: true});
+    });
+</script>

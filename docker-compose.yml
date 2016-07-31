@@ -1,34 +1,55 @@
+# IoT Platform
 version: '2'
 
 services:
+  # AngularJS App
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile-nginx
+    container_name: tcc-app
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/usr/share/nginx/html
+    links:
+      - api
 
- # API
- api:
-   container_name: tcc-api
-   image: douglaszuqueto/alpine-nodejs:6.3.0
-   volumes:
-    - ./api:/app/api
-   working_dir: /app/api
-   ports:
-    - 3000:3000
-   command: "node bin/www"
+  # NodeJS App
+  api:
+    image: douglaszuqueto/alpine-nodejs:6.3.0
+    container_name: tcc-api
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/app/api
+    working_dir: /app/api
+    links:
+      - mongodb
+    command: npm start
 
+
+  # MongoDB
+  mongodb:
+    image: douglaszuqueto/alpine-mongodb:3.2.7
+    container_name: tcc-mongodb
+    ports:
+      - 27017
+    volumes:
+      - mongodb-data:/data/db
 
  # Broker MQTT
- broker:
+  broker:
     container_name: tcc-broker
     image: douglaszuqueto/alpine-nodejs:6.3.0
     volumes:
-     - ./mqtt:/app/mqtt
+      - ./mqtt:/app/mqtt
     working_dir: /app/mqtt
     ports:
-     - 1883:1883
+      - 1883:1883
     command: "node broker"
 
- # Redis
-
- # MongoDB
-
- # WebSockets
-
- # Web
+volumes:
+  mongodb-data:
+    external:
+      name: mongodb-data

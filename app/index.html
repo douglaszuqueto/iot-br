@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Monitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="src/bower_components/materialize/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body data-ng-app="app">
+
+<div ui-view></div>
+
+<!-- Vendor -->
+<script src="src/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="src/bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="src/bower_components/angular/angular.min.js"></script>
+<script src="src/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="src/bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="src/bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+
+<!-- APP -->
+<script src="src/app/core/core.js"></script>
+<script src="src/app/core/core.provider.js"></script>
+<script src="src/app/core/core.run.js"></script>
+<script src="src/app/core/intercepetors/jwtInterceptor.js"></script>
+
+<!--Login-->
+<script src="src/app/auth/auth.js"></script>
+<script src="src/app/auth/controllers/LoginController.js"></script>
+
+<!--Home-->
+<script src="src/app/dashboard/home.js"></script>
+<script src="src/app/dashboard/controllers/HomeController.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,13 @@
 module.exports = {
+
     server: {
-        port: 3000
+        url: '',
+        port: '3000'
+    },
+    mongodb: {
+        uri: 'mongodb://mongodb/test',
+        config: {}
     }
-}
+
+};
+
