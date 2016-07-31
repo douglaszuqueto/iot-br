@@ -174,7 +174,11 @@ module.exports = {
                 });
             }
 
-            let token = jwt.sign(user, secret, {
+            let payload = {
+                'name': user.name,
+                'email': user.email,
+            };
+            let token = jwt.sign(payload, secret, {
                 expiresIn: '60m'
             });
 
