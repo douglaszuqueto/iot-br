@@ -3,11 +3,13 @@ angular.module('app', [
     'ui.router',
     'angular-jwt',
     'app.auth',
-    'app.home'
+    'app.home',
+    'app.user'
 ]);
 
 angular.module('app.auth', []);
 angular.module('app.home', []);
+angular.module('app.user', []);
 
 
 angular.module('app').config(['appConfigProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', config]);
