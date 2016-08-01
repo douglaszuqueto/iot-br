@@ -6,17 +6,27 @@ function config($stateProvider, $urlRouterProvider) {
      */
     var user = {
         name: 'user',
-        url: '/user',
         parent: 'base',
-        views: {
-            '': {
-                templateUrl: 'src/app/user/views/index.html',
-                controller: 'indexController as User',
-            }
-        }
+        abstract: true,
+        template: '<ui-view></ui-view>'
+
+    };
+    var index = {
+        name: 'user.index',
+        url: '/user/list',
+        templateUrl: 'src/app/user/views/index.html',
+        controller: 'indexController as User',
+    };
+    var create = {
+        name: 'user.create',
+        url: '/user/create',
+        templateUrl: 'src/app/user/views/create.html',
+        controller: 'createController as UserCreate',
     };
 
     $stateProvider
-        .state(user);
+        .state(user)
+        .state(index)
+        .state(create);
 
 };

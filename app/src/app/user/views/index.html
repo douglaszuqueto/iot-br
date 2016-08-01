@@ -1,8 +1,31 @@
 <div class="container">
-    <h1>{{User.page}}</h1>
+    <div class="col l10">
+
+        <h4>{{User.page}}</h4>
 
 
-    <div data-ng-repeat="user in User.users">
-        <li>{{user.name}}</li>
+        <table class="bordered highlight centered">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="user in User.users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <a href="">
+                        <i class="material-icons">mode_edit</i>
+                    </a>
+                    <a data-ng-click="User.remove(user)">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>

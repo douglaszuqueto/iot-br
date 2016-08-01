@@ -9,13 +9,14 @@
         }
 
         .container {
-            width: 95%;
+            width: 85%;
         }
     }
 
     @media only screen and (min-width: 993px) {
 
         .container {
+            padding-left: 10px;
             width: 95%;
         }
     }
@@ -88,8 +89,8 @@
                     <a class="collapsible-header  waves-effect waves-blue">Usuários</a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a ui-sref="user">Usuários</a></li>
-                            <li><a ui-sref="telefone">Cadastrar Usuário</a></li>
+                            <li><a ui-sref="user.index">Usuários</a></li>
+                            <li><a ui-sref="user.create">Cadastrar Usuário</a></li>
                         </ul>
                     </div>
                 </li>

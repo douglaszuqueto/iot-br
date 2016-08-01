@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <h5>{{UserCreate.page}}</h5>
+
+        <div class="row">
+            <form class="col l8 offset-l2" data-ng-submit="UserCreate.create(user)">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text" class="validate" data-ng-model="user.name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="password" type="password" class="validate" data-ng-model="user.password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate" data-ng-model="user.email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div>
+                            <input type="reset" value="Limpar Campos" class="btn btn-flat col s4 left">
+                        </div>
+                        <div>
+                            <input type="submit" value="Cadastrar Usuário" class="btn col s4 right">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
