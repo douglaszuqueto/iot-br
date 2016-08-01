@@ -40,7 +40,7 @@ function config(appConfigProvider, $stateProvider, $urlRouterProvider, $httpProv
         name: 'base',
         url: '',
         abstract: true,
-        // controller: 'BaseController as Base',
+        controller: 'BaseController as Base',
         templateUrl: 'src/app/core/views/base.html'
     };
     var index = {
