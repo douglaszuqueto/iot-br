@@ -34,4 +34,21 @@
  
  Outro fator positivo que não faz parte do projeto, mas é pelo fato do Docker estar sendo cada vez mais utilizados
  pelas empresas. Então a dica é: Estude todo o ecossistema do Docker. - E não se arrependerás  :P
+ 
+## Serviços que compoe todo o ecossistema do projeto (Será adicionado outros serviços)
+ * MongoDB - Banco de Dados da Plataforma;
+ * API NodeJS - Todos os recursos estarão nessa API - Usuários, Logs, Dados de Sensores...;
+ * Broker MQTT - Broker MQTT da Plataforma * utiliza NodeJS;
+ * Aplicação Web - Será da Dashboard da Plataforma;
+ 
+## Requisitos para rodar o projeto (Poderá surgir mais dependencias durante o desenvolvimento)
+ Como citei anteriormente, o uso do Docker não é obrigatório. Você poderá rodar todos os serviços manualmente. 
+ Mas também, como foi citado, irei abranger ele na utilização.
+ 
+ * Docker: [Link de Instruções](https://docs.docker.com/engine/installation/)
+ * Docker Compose: [Link de Instruções](https://docs.docker.com/compose/install/)
+ * NodeJS / NPM: [Link de Instruções](https://nodejs.org/en/download/current)
+    * Bower: [Link de Instruções](https://bower.io/)
+    * Gulp: [Link de Instruções](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
   
