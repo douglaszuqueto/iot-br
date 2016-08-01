@@ -19,9 +19,7 @@ module.exports = {
                     error_message: err
                 };
             }
-            data = {
-                'data': {users}
-            };
+            data = users;
 
             return cb(data);
 
@@ -45,9 +43,7 @@ module.exports = {
                     error_message: err
                 };
             }
-            data = {
-                'data': {user}
-            };
+            data = user;
 
             return cb(data);
 
@@ -76,9 +72,7 @@ module.exports = {
                 };
             }
 
-            data = {
-                'data': {user}
-            };
+            data = user;
 
             return cb(data);
         });
@@ -109,9 +103,7 @@ module.exports = {
                     };
                 }
 
-                data = {
-                    'data': {user}
-                };
+                data = user;
 
                 return cb(data);
             });

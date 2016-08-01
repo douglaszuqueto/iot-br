@@ -7,7 +7,7 @@ function indexController($http, $location) {
 
     $http.get('http://localhost:3000/api/v1/users')
         .then(function (response) {
-            vm.users = response.data.data.users;
+            vm.users = response.data;
         });
 
 }
