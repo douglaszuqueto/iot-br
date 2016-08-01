@@ -2,11 +2,16 @@ angular.module('app', [
     'ngResource',
     'ui.router',
     'angular-jwt',
+    'app.index',
     'app.auth',
     'app.home',
     'app.user'
 ]);
 
+/**
+ * Modules
+ */
+angular.module('app.index', []);
 angular.module('app.auth', []);
 angular.module('app.home', []);
 angular.module('app.user', []);
@@ -43,14 +48,8 @@ function config(appConfigProvider, $stateProvider, $urlRouterProvider, $httpProv
         controller: 'BaseController as Base',
         templateUrl: 'src/app/core/views/base.html'
     };
-    var index = {
-        name: 'index',
-        url: '/',
-        templateUrl: 'src/app/core/views/index.html'
-    };
 
     $stateProvider
-        .state(base)
-        .state(index);
+        .state(base);
 
 }
