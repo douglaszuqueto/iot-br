@@ -1,4 +1,4 @@
-# Projeto de Refatoração do TCC
+# Projeto de Refatoração do TCC e Criação de uma Plataforma para IoT
  Esse projeto tem como objetivo refatorar O Software do meu TCC - 'Monitoramento em Tempo Real do Consumo de 
  Energia Elétrica'. 
  
