@@ -51,4 +51,7 @@
     * Bower: [Link de Instruções](https://bower.io/)
     * Gulp: [Link de Instruções](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
-  
+## Dúvidas?
+ * [Telegram](telegram.me/douglaszuqueto)
+ * [Facebook](https://www.facebook.com/douglaszuqueto)
+ * [Email](douglas.zuqueto@gmail.com)
