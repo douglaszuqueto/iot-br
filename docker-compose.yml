@@ -5,13 +5,13 @@ services:
   # AngularJS App
   app:
     build:
-      context: ./docker/app
+      context: ./docker/front
       dockerfile: Dockerfile-nginx
-    container_name: tcc-app
+    container_name: tcc-front
     ports:
       - 80:80
     volumes:
-      - ./app:/usr/share/nginx/html
+      - ./front:/usr/share/nginx/html
     links:
       - api
 
@@ -24,8 +24,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./api:/app/api
-    working_dir: /app/api
+      - ./api:/api
+    working_dir: /api
     links:
       - mongodb
     command: npm start
@@ -45,8 +45,8 @@ services:
     container_name: tcc-broker
     image: douglaszuqueto/alpine-nodejs:6.3.0
     volumes:
-      - ./mqtt:/app/mqtt
-    working_dir: /app/mqtt
+      - ./broker:/broker
+    working_dir: /broker
     ports:
       - 1883:1883
     command: "node broker"
