@@ -4,6 +4,7 @@
   "description": "",
   "main": "broker.js",
   "scripts": {
+    "start": "nodemon broker",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
