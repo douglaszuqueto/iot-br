@@ -1,3 +1,5 @@
+angular.module('app.index', []);
+
 angular.module('app.index').config(['$stateProvider', '$urlRouterProvider', config]);
 
 function config($stateProvider, $urlRouterProvider) {

@@ -1,4 +1,4 @@
-angular.module('app.auth').service('jwtInterceptor', jwtInterceptor);
+angular.module('app').service('jwtInterceptor', jwtInterceptor);
 function jwtInterceptor($q, $rootScope) {
     return {
         request: function request(config) {

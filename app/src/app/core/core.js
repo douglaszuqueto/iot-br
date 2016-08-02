@@ -8,23 +8,9 @@ angular.module('app', [
     'app.user'
 ]);
 
-/**
- * Modules
- */
-angular.module('app.index', []);
-angular.module('app.auth', []);
-angular.module('app.home', []);
-angular.module('app.user', []);
-
-
 angular.module('app').config(['appConfigProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', 'jwtInterceptorProvider', config]);
 
-function config(appConfigProvider, $stateProvider, $urlRouterProvider, $httpProvider, jwtInterceptorProvider) {
-
-    // jwtInterceptorProvider.tokenGetter = ['myService', function(myService) {
-    //     myService.doSomething();
-    //     return localStorage.getItem('token');
-    // }];
+function config(appConfigProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
 
     $httpProvider.interceptors.push('jwtInterceptor');
     /**
@@ -33,9 +19,7 @@ function config(appConfigProvider, $stateProvider, $urlRouterProvider, $httpProv
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
     $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-
     $httpProvider.defaults.transformRequest = appConfigProvider.config.utils.transformRequest;
-
 
     /**
      * Rotas
