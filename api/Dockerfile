@@ -1,8 +1,8 @@
 FROM douglaszuqueto/alpine-nodejs:6.3.0
 
-COPY . /app/api
+COPY . /api
 
-WORKDIR /app/api
+WORKDIR /api
 
 RUN npm -g install nodemon
 

@@ -1,8 +1,8 @@
 FROM douglaszuqueto/alpine-nodejs:6.3.0
 
-COPY . /app/broker
+COPY . /broker
 
-WORKDIR /app/broker
+WORKDIR /broker
 
 RUN npm -g install nodemon
 
