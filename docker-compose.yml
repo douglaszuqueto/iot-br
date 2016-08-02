@@ -17,7 +17,9 @@ services:
 
   # NodeJS App
   api:
-    image: douglaszuqueto/alpine-nodejs:6.3.0
+    build:
+      context: ./docker/api
+      dockerfile: Dockerfile-nodejs
     container_name: tcc-api
     ports:
       - 3000:3000
