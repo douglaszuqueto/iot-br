@@ -1,8 +1,8 @@
 angular.module('app.user').controller('indexController', indexController);
 
-indexController.$inject = ['$http', '$window'];
+indexController.$inject = ['$window', 'User'];
 
-function indexController($http, $window) {
+function indexController($window, User) {
     var vm = this;
 
     vm.page = 'Usuários';
@@ -12,10 +12,9 @@ function indexController($http, $window) {
      */
     loadUsers();
     function loadUsers() {
-        $http.get('http://localhost:3000/api/v1/users')
-            .then(function (response) {
-                vm.users = response.data;
-            });
+        User.query({}, function (response) {
+            vm.users = response;
+        });
     }
 
     /**
@@ -24,11 +23,14 @@ function indexController($http, $window) {
      */
     vm.remove = remove;
     function remove(user) {
-        $http.delete('http://localhost:3000/api/v1/users/' + user._id)
-            .then(function (response) {
+        User.remove({}, {id: user._id}, function (response) {
+            console.log(response);
+            if (response.status) {
                 $window.Materialize.toast('Usuário ' + user.name + ' removido', 2000);
                 loadUsers();
-            });
+            } else {
+                $window.Materialize.toast('Erro ' + response.status, 3000);
+            }
+        });
     }
-
 }
