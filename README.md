@@ -51,6 +51,9 @@
     * Bower: [Link de Instruções](https://bower.io/)
     * Gulp: [Link de Instruções](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
+## Wiki
+ * [Documentação do Projeto](https://github.com/douglaszuqueto/tcc/wiki)
+
 ## Dúvidas?
  * [Telegram](https://telegram.me/douglaszuqueto)
  * [Facebook](https://www.facebook.com/douglaszuqueto)
