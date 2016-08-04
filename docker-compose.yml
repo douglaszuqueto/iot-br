@@ -42,8 +42,10 @@ services:
 
  # Broker MQTT
   broker:
+    build:
+      context: ./docker/broker
+      dockerfile: Dockerfile-broker
     container_name: tcc-broker
-    image: douglaszuqueto/alpine-nodejs:6.3.0
     volumes:
       - ./broker:/broker
     working_dir: /broker
