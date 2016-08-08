@@ -50,6 +50,29 @@ module.exports = {
         });
     },
     /**
+     * Get User by Email
+     * @param id
+     * @param cb
+     */
+    getByEmail: (email, cb) => {
+
+        User.findOne({'email': email}, (err, user) => {
+
+            let data = {};
+
+            if (err) {
+                data = {
+                    error: true,
+                    error_message: err
+                };
+            }
+            data = user;
+
+            return cb(data);
+
+        });
+    },
+    /**
      * Create a new User
      * @param data
      * @param cb
