@@ -3,15 +3,19 @@ const config = require('./config/config');
 
 const subscriber = mqtt.connect(config.subscriber.uri, config.subscriber.options);
 
-subscriber.on('connect', () => {
+const connect = () => {
     console.log('Connected Broker');
     subscriber.subscribe('test');
-});
-subscriber.on('reconnect', () => console.log('Retry'))
-
-subscriber.on('close', () => console.log('Close Connection'))
-
-subscriber.on('message', (topic, message) => {
+};
+const reconnect = () => console.log('Retry');
+const close = () => console.log('Close Connection');
+const message = (topic, message) => {
     console.log('Topic:', topic);
     console.log('Message:', message.toString());
-});
+};
+
+subscriber
+    .on('connect', connect);
+    .on('reconnect', reconnect);
+    .on('close', close);
+    .on('message', message);
